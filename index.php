@@ -103,3 +103,24 @@ foreach ($faturamento as $estado => $valor) {
     $percentual = ($valor / $faturamentoTotal) * 100;
     echo "Estado: $estado - Percentual de representação: " . number_format($percentual, 2, ',', '.') . "%<br>";
 }
+
+echo"<br>";
+echo"Teste 5";
+echo"<br>";
+
+
+$string = "string invertida";
+
+
+$stringInvertida = "";
+
+
+$comprimento = strlen($string);
+
+
+for ($i = $comprimento - 1; $i >= 0; $i--) {
+    $stringInvertida .= $string[$i];
+}
+
+echo "String original: $string<br>";
+echo "String invertida: $stringInvertida<br>";
