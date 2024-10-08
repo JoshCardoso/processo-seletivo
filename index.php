@@ -15,11 +15,10 @@ while ($k < $indece){
     
 }
 
-echo "o valor final da Variavel Soma é " . $soma;
+echo "o valor final da Variavel Soma é $soma <br>";
 
-echo"<br>";
-echo"<br>";
 // teste 2
+echo"<br>";
 echo"Teste 2";
 echo"<br>";
 
@@ -38,15 +37,13 @@ function pertence_fibonacci($n) {
 
 $numero = 5; 
 if (pertence_fibonacci($numero)) {
-    echo "$numero pertence à sequência de Fibonacci.";
+    echo "$numero pertence à sequência de Fibonacci. <br>";
 } else {
-    echo "$numero não pertence à sequência de Fibonacci.";
+    echo "$numero não pertence à sequência de Fibonacci. <br>";
 }
 
-echo"<br>";
-echo"<br>";
-
 // teste 3
+echo"<br>";
 echo"Teste 3";
 echo"<br>";
 
@@ -89,3 +86,20 @@ echo "Número de dias com faturamento acima da média mensal: $acimaMedia<br>";
 echo"<br>";
 echo"Teste 4";
 echo"<br>";
+
+
+$faturamento = [
+    "SP" => 67836.43,
+    "RJ" => 36678.66,
+    "MG" => 29229.88,
+    "ES" => 27165.48,
+    "Outros" => 19849.53
+];
+
+$faturamentoTotal = array_sum($faturamento);
+
+
+foreach ($faturamento as $estado => $valor) {
+    $percentual = ($valor / $faturamentoTotal) * 100;
+    echo "Estado: $estado - Percentual de representação: " . number_format($percentual, 2, ',', '.') . "%<br>";
+}
